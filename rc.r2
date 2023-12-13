@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = videoSetup"
+"e scr.highlight = fcn.a0013eb0"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -3428,8 +3428,8 @@ s 0xa0014068
 "afc reg"
 s-
 afS 0 @ 0xa0014068
-"f fcn.a0013ec8 22 0xa0013ec8"
-"af+ 0xa0013ec8 fcn.a0013ec8 f n"
+"f getGlobal_42b90 22 0xa0013ec8"
+"af+ 0xa0013ec8 getGlobal_42b90 f n"
 afb+ 0xa0013ec8 0xa0013ec8 22 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa0013ec8
 s 0xa0013ec8
@@ -3480,8 +3480,8 @@ s 0xa0014d24
 "afc reg"
 s-
 afS 0 @ 0xa0014d24
-"f fcn.a0013eb0 22 0xa0013eb0"
-"af+ 0xa0013eb0 fcn.a0013eb0 f n"
+"f getGlobal_412b0 22 0xa0013eb0"
+"af+ 0xa0013eb0 getGlobal_412b0 f n"
 afb+ 0xa0013eb0 0xa0013eb0 22 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa0013eb0
 s 0xa0013eb0
@@ -8558,8 +8558,8 @@ f fcn.a0013bbc 116 0xa0013bbc
 f fcn.a0013c30 272 0xa0013c30 
 f fcn.a0013d40 28 0xa0013d40 
 f fcn.a0013d78 258 0xa0013d78 
-f fcn.a0013eb0 22 0xa0013eb0 
-f fcn.a0013ec8 22 0xa0013ec8 
+f getGlobal_412b0 22 0xa0013eb0 
+f getGlobal_42b90 22 0xa0013ec8 
 f debugLog 10 0xa0013ee0 
 f videoSetup 124 0xa0013eec 
 f fcn.a0014068 3258 0xa0014068 
@@ -23315,4 +23315,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0013eec
+s 0xa0013eac
