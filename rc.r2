@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a003465c"
+"e scr.highlight = fcn.a000c59c"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -2301,8 +2301,8 @@ s 0xa0013d78
 "afc reg"
 s-
 afS 0 @ 0xa0013d78
-"f fcn.a000c59c 32 0xa000c59c"
-"af+ 0xa000c59c fcn.a000c59c f n"
+"f USB_ISR 32 0xa000c59c"
+"af+ 0xa000c59c USB_ISR f n"
 afb+ 0xa000c59c 0xa000c59c 32 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa000c59c
 s 0xa000c59c
@@ -8470,7 +8470,7 @@ f fcn.a000c4ac 10 0xa000c4ac
 f fcn.a000c4b8 22 0xa000c4b8 
 f fcn.a000c4d0 112 0xa000c4d0 
 f fcn.a000c540 92 0xa000c540 
-f fcn.a000c59c 32 0xa000c59c 
+f USB_ISR 32 0xa000c59c 
 f fcn.a000c5bc 100 0xa000c5bc 
 f fcn.a000c620 760 0xa000c620 
 f fcn.a000c918 58 0xa000c918 
@@ -23324,4 +23324,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa003465c
+s 0xa000c580
