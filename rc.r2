@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a0013eb0"
+"e scr.highlight = sus_readInput"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -8338,6 +8338,14 @@ s 0xa00ece10
 "afc reg"
 s-
 afS 0 @ 0xa00ece10
+"f sus_readInput 50 0xa0013e7c"
+"af+ 0xa0013e7c sus_readInput f n"
+afb+ 0xa0013e7c 0xa0013e7c 50 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0xa0013e7c
+s 0xa0013e7c
+"afc reg"
+s-
+afS 0 @ 0xa0013e7c
 
 # registers
 fs+registers
@@ -8558,6 +8566,7 @@ f fcn.a0013bbc 116 0xa0013bbc
 f fcn.a0013c30 272 0xa0013c30 
 f fcn.a0013d40 28 0xa0013d40 
 f fcn.a0013d78 258 0xa0013d78 
+f sus_readInput 50 0xa0013e7c 
 f getGlobal_412b0 22 0xa0013eb0 
 f getGlobal_42b90 22 0xa0013ec8 
 f debugLog 10 0xa0013ee0 
@@ -23315,4 +23324,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0013eac
+s 0xa0013e74
