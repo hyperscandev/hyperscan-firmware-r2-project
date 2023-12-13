@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a00178b8"
+"e scr.highlight = fcn.a001528c"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -891,8 +891,8 @@ s 0xa0001df0
 "afc reg"
 s-
 afS 0 @ 0xa0001df0
-"f fcn.a001528c 60 0xa001528c"
-"af+ 0xa001528c fcn.a001528c f n"
+"f waitVBlank 60 0xa001528c"
+"af+ 0xa001528c waitVBlank f n"
 afb+ 0xa001528c 0xa001528c 12 0xa0015298 0xffffffffffffffff
 afb+ 0xa001528c 0xa0015298 20 0xa00152b4 0xa00152ac
 afb+ 0xa001528c 0xa00152ac 8 0xa0015298 0xffffffffffffffff
@@ -8575,7 +8575,7 @@ f fcn.a0014068 3258 0xa0014068
 f fcn.a0014d24 892 0xa0014d24 
 f fcn.a00150a0 154 0xa00150a0 
 f fcn.a001513c 336 0xa001513c 
-f fcn.a001528c 60 0xa001528c 
+f waitVBlank 60 0xa001528c 
 fs *
 f aav.0xa0015298 8 0xa0015298 
 fs *
@@ -23324,4 +23324,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa00178b8
+s 0xa001528c
