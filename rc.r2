@@ -82,7 +82,7 @@
 "e asm.bytes.space = false"
 "e asm.calls = true"
 "e asm.capitalize = false"
-"e asm.cmt.col = 71"
+"e asm.cmt.col = 69"
 "e asm.cmt.esil = false"
 "e asm.cmt.flgrefs = true"
 "e asm.cmt.fold = false"
@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = "
+"e scr.highlight = 0xa0013f0c"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -4692,24 +4692,14 @@ axC 0xa000a0a8 0xa000b988
 axC 0xa001528c 0xa000b98c
 axc 0xa000b972 0xa000b99c
 afS 0 @ 0xa000b964
-"f fcn.a0013eec 124 0xa0013eec"
+"f fcn.a0013eec 2 0xa0013eec"
 "af+ 0xa0013eec fcn.a0013eec f n"
-afb+ 0xa0013eec 0xa0013eec 16 0xa0013f18 0xa0013efc
-afb+ 0xa0013eec 0xa0013efc 28 0xa0013f62 0xffffffffffffffff
-afb+ 0xa0013eec 0xa0013f18 12 0xa0013f40 0xa0013f24
-afb+ 0xa0013eec 0xa0013f24 28 0xa0013f62 0xffffffffffffffff
-afb+ 0xa0013eec 0xa0013f40 12 0xa0013f62 0xa0013f4c
-afb+ 0xa0013eec 0xa0013f4c 22 0xa0013f62 0xffffffffffffffff
-afb+ 0xa0013eec 0xa0013f62 6 0xffffffffffffffff 0xffffffffffffffff
+afb+ 0xa0013eec 0xa0013eec 2 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa0013eec
 s 0xa0013eec
 "afc reg"
 s-
 axc 0xa0013f18 0xa0013ef8
-axc 0xa0013f62 0xa0013f14
-axc 0xa0013f40 0xa0013f20
-axc 0xa0013f62 0xa0013f3c
-axc 0xa0013f62 0xa0013f48
 afS 0 @ 0xa0013eec
 "f fcn.a000d614 356 0xa000d614"
 "af+ 0xa000d614 fcn.a000d614 f n"
@@ -6351,8 +6341,8 @@ s-
 axc 0xa0012a7c 0xa0012a48
 axc 0xa0012a3e 0xa0012a78
 afS 0 @ 0xa0012a2c
-"f fcn.a0013ee0 10 0xa0013ee0"
-"af+ 0xa0013ee0 fcn.a0013ee0 f n"
+"f debugLog 10 0xa0013ee0"
+"af+ 0xa0013ee0 debugLog f n"
 afb+ 0xa0013ee0 0xa0013ee0 10 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa0013ee0
 s 0xa0013ee0
@@ -11699,7 +11689,7 @@ f fcn.a0013d40 28 0xa0013d40
 f fcn.a0013d78 258 0xa0013d78 
 f fcn.a0013eb0 22 0xa0013eb0 
 f fcn.a0013ec8 22 0xa0013ec8 
-f fcn.a0013ee0 10 0xa0013ee0 
+f debugLog 10 0xa0013ee0 
 f fcn.a0013eec 124 0xa0013eec 
 f fcn.a0014068 3258 0xa0014068 
 f fcn.a0014d24 892 0xa0014d24 
@@ -25706,4 +25696,4 @@ ax  0xa00010a8 0xa0ffffec
 # macros
 # aliases
 # seek
-s 0xa00346f0
+s 0xa0013f04
