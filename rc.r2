@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a001528c"
+"e scr.highlight = fcn.a003465c"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -1345,8 +1345,8 @@ s 0xa00045e0
 "afc reg"
 s-
 afS 0 @ 0xa00045e0
-"f fcn.a003465c 148 0xa003465c"
-"af+ 0xa003465c fcn.a003465c f n"
+"f memcpy 148 0xa003465c"
+"af+ 0xa003465c memcpy f n"
 afb+ 0xa003465c 0xa003465c 12 0xa0034674 0xa0034668
 afb+ 0xa003465c 0xa0034668 12 0xa0034694 0xa0034674
 afb+ 0xa003465c 0xa0034674 12 0xa0034690 0xa0034680
@@ -8860,7 +8860,7 @@ f fcn.a0033fdc 10 0xa0033fdc
 f fcn.a00343d8 340 0xa00343d8 
 f fcn.a003452c 140 0xa003452c 
 f fcn.a00345b8 164 0xa00345b8 
-f fcn.a003465c 148 0xa003465c 
+f memcpy 148 0xa003465c 
 f memset 156 0xa00346f0 
 f fcn.a003478c 162 0xa003478c 
 f fcn.a0034830 130 0xa0034830 
@@ -23324,4 +23324,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa001528c
+s 0xa003465c
