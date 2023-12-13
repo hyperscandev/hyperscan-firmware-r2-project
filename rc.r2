@@ -119,12 +119,12 @@
 "e asm.flags.right = false"
 "e asm.functions = true"
 "e asm.highlight = "
-"e asm.hint.call = true"
+"e asm.hint.call = false"
 "e asm.hint.call.indirect = true"
 "e asm.hint.cdiv = false"
 "e asm.hint.emu = false"
 "e asm.hint.imm = false"
-"e asm.hint.jmp = false"
+"e asm.hint.jmp = true"
 "e asm.hint.lea = false"
 "e asm.hint.pos = 1"
 "e asm.hints = true"
@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = sus_readInput"
+"e scr.highlight = fcn.a00178b8"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -1951,8 +1951,8 @@ s 0xa000aec0
 "afc reg"
 s-
 afS 0 @ 0xa000aec0
-"f fcn.a00178b8 726 0xa00178b8"
-"af+ 0xa00178b8 fcn.a00178b8 f n"
+"f initalizeSPU 726 0xa00178b8"
+"af+ 0xa00178b8 initalizeSPU f n"
 afb+ 0xa00178b8 0xa00178b8 16 0xa00178c8 0xffffffffffffffff
 afb+ 0xa00178b8 0xa00178c8 12 0xa0017900 0xa00178d4
 afb+ 0xa00178b8 0xa00178d4 44 0xa00178c8 0xffffffffffffffff
@@ -8606,7 +8606,7 @@ f fcn.a0017064 1054 0xa0017064
 f fcn.a001751c 170 0xa001751c 
 f fcn.a00175c8 572 0xa00175c8 
 f fcn.a0017894 34 0xa0017894 
-f fcn.a00178b8 726 0xa00178b8 
+f initalizeSPU 726 0xa00178b8 
 f fcn.a001800e 4 0xa001800e 
 f fcn.a00180ec 26 0xa00180ec 
 f fcn.a00182f8 496 0xa00182f8 
@@ -23324,4 +23324,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0013e74
+s 0xa00178b8
