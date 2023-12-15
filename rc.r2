@@ -122,9 +122,9 @@
 "e asm.hint.call = false"
 "e asm.hint.call.indirect = true"
 "e asm.hint.cdiv = false"
-"e asm.hint.emu = false"
+"e asm.hint.emu = true"
 "e asm.hint.imm = false"
-"e asm.hint.jmp = true"
+"e asm.hint.jmp = false"
 "e asm.hint.lea = false"
 "e asm.hint.pos = 1"
 "e asm.hints = true"
@@ -2094,8 +2094,8 @@ s 0xa0019114
 "afc reg"
 s-
 afS 0 @ 0xa0019114
-"f fcn.a000bf14 56 0xa000bf14"
-"af+ 0xa000bf14 fcn.a000bf14 f n"
+"f setupTvFramebuffers 56 0xa000bf14"
+"af+ 0xa000bf14 setupTvFramebuffers f n"
 afb+ 0xa000bf14 0xa000bf14 56 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa000bf14
 s 0xa000bf14
@@ -8447,7 +8447,7 @@ f fcn.a000bb94 60 0xa000bb94
 f fcn.a000bbd0 224 0xa000bbd0 
 f fcn.a000bcb0 606 0xa000bcb0 
 f fcn.a000bf0e 4 0xa000bf0e 
-f fcn.a000bf14 56 0xa000bf14 
+f setupTvFramebuffers 56 0xa000bf14 
 f fcn.a000bf84 156 0xa000bf84 
 fs *
 f aav.0xa000c0a4 8 0xa000c0a4 
@@ -20212,6 +20212,8 @@ ahb 64 @ 0xa0013d40
 ahb 64 @ 0xa0013d5c
 ahb 64 @ 0xa0013d78
 ahb 64 @ 0xa0013e7a
+ahb 64 @ 0xa0013e7c
+ahb 64 @ 0xa0013eae
 ahb 64 @ 0xa0013eb0
 ahb 64 @ 0xa0013ec6
 ahb 64 @ 0xa0013ec8
@@ -23324,4 +23326,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa000c580
+s 0xa000bf14
