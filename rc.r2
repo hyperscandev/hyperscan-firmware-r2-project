@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa001410c
+f pc 4 0xa0014138
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa001410c
+aer pc = 0xa0014138
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27296,7 +27296,7 @@ f debugLog 10 0xa0013ee0
 f videoSetup 2 0xa0013eec 
 f fcn.a0014068 3258 0xa0014068 
 fs registers
-f pc 4 0xa001410c 
+f pc 4 0xa0014138 
 fs functions
 f fcn.a0014d24 892 0xa0014d24 
 f fcn.a00150a0 154 0xa00150a0 
