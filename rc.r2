@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = int32_t"
+"e scr.highlight = ──────────────────────────────────────────────────────────────────────────┌──────────────────────────────────────────────────────────────────────────┐"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -104676,4 +104676,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa000d2b0
+s 0xa001410c
