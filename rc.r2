@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa0014138
+f pc 4 0xa0025f44
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa0014138
+aer pc = 0xa0025f44
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27295,9 +27295,6 @@ f getGlobal_42b90 22 0xa0013ec8
 f debugLog 10 0xa0013ee0 
 f videoSetup 2 0xa0013eec 
 f fcn.a0014068 3258 0xa0014068 
-fs registers
-f pc 4 0xa0014138 
-fs functions
 f fcn.a0014d24 892 0xa0014d24 
 f fcn.a00150a0 154 0xa00150a0 
 f fcn.a001513c 336 0xa001513c 
@@ -27515,6 +27512,9 @@ f fcn.a0025e74 60 0xa0025e74
 f fcn.a0025eb0 116 0xa0025eb0 
 f fcn.a0025f24 32 0xa0025f24 
 f fcn.a0025f44 936 0xa0025f44 
+fs registers
+f pc 4 0xa0025f44 
+fs functions
 f fcn.a00262ec 420 0xa00262ec 
 f fcn.a002664c 98 0xa002664c 
 f fcn.a00266b0 96 0xa00266b0 
@@ -104676,4 +104676,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0025f44
+s 0xa0025650
