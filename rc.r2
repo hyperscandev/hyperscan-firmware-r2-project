@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = memcpy"
+"e scr.highlight = fcn.a000c954"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -2473,8 +2473,8 @@ s 0xa000c918
 "afc reg"
 s-
 afS 0 @ 0xa000c918
-"f fcn.a000c954 40 0xa000c954"
-"af+ 0xa000c954 fcn.a000c954 f n"
+"f irqHandleI2CMaster 40 0xa000c954"
+"af+ 0xa000c954 irqHandleI2CMaster f n"
 afb+ 0xa000c954 0xa000c954 40 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa000c954
 s 0xa000c954
@@ -27197,7 +27197,7 @@ f USB_ISR 32 0xa000c59c
 f fcn.a000c5bc 100 0xa000c5bc 
 f fcn.a000c620 760 0xa000c620 
 f fcn.a000c918 58 0xa000c918 
-f fcn.a000c954 40 0xa000c954 
+f irqHandleI2CMaster 40 0xa000c954 
 f fcn.a000c97c 158 0xa000c97c 
 f fcn.a000ca1c 22 0xa000ca1c 
 f waitForTimer 70 0xa000ca6c 
@@ -104702,4 +104702,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0013ee0
+s 0xa000c954
