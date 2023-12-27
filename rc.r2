@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = memset"
+"e scr.highlight = fcn.a00348b4"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -4682,8 +4682,8 @@ s 0xa0012ea8
 "afc reg"
 s-
 afS 0 @ 0xa0012ea8
-"f fcn.a00348b4 126 0xa00348b4"
-"af+ 0xa00348b4 fcn.a00348b4 f n"
+"f strlen 126 0xa00348b4"
+"af+ 0xa00348b4 strlen f n"
 afb+ 0xa00348b4 0xa00348b4 12 0xa0034914 0xa00348c0
 afb+ 0xa00348b4 0xa00348c0 40 0xa0034910 0xa00348e8
 afb+ 0xa00348b4 0xa00348e8 40 0xa00348e8 0xa0034910
@@ -27591,7 +27591,7 @@ f _memset 156 0xa00346f0
 f memset 156 0xa00346f0 
 f fcn.a003478c 162 0xa003478c 
 f fcn.a0034830 130 0xa0034830 
-f fcn.a00348b4 126 0xa00348b4 
+f strlen 126 0xa00348b4 
 f fcn.a0034934 36 0xa0034934 
 f fcn.a0034958 44 0xa0034958 
 f fcn.a0034984 26 0xa0034984 
@@ -103223,10 +103223,11 @@ ahb 64 @ 0xa012fff8
 "tk func.memcmp.arg.2=size_t,n"
 "tk func.memcmp.args=3"
 "tk func.memcmp.ret=int"
-"tk func.memcpy.arg.0=void *,s1"
-"tk func.memcpy.arg.1=const void *,s2"
-"tk func.memcpy.arg.2=size_t,n"
+"tk func.memcpy.arg.0=void *,dest"
+"tk func.memcpy.arg.1=const void *,src"
+"tk func.memcpy.arg.2=uint32_t,n"
 "tk func.memcpy.args=3"
+"tk func.memcpy.cc=cdecl"
 "tk func.memcpy.ret=void *"
 "tk func.memmem.arg.0=const void *,big"
 "tk func.memmem.arg.1=int,big_len"
@@ -103720,9 +103721,10 @@ ahb 64 @ 0xa012fff8
 "tk func.strlcpy.arg.2=size_t, n"
 "tk func.strlcpy.args=3"
 "tk func.strlcpy.ret=char *"
-"tk func.strlen.arg.0=const char *,s"
+"tk func.strlen.arg.0=const char *,str"
 "tk func.strlen.args=1"
-"tk func.strlen.ret=size_t"
+"tk func.strlen.cc=cdecl"
+"tk func.strlen.ret=uint32_t"
 "tk func.strmode.arg.0=int,mode"
 "tk func.strmode.arg.1=char *,bp"
 "tk func.strmode.args=2"
@@ -104689,4 +104691,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0034654
+s 0xa00348b4
