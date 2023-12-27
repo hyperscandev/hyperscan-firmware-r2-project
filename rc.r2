@@ -2773,8 +2773,8 @@ s 0xa001ad4c
 "afc reg"
 s-
 afS 0 @ 0xa001ad4c
-"f fcn.a0018c60 588 0xa0018c60"
-"af+ 0xa0018c60 fcn.a0018c60 f n"
+"f handle_gp_15416 588 0xa0018c60"
+"af+ 0xa0018c60 handle_gp_15416 f n"
 afb+ 0xa0018c60 0xa0018c60 36 0xa0018ea0 0xa0018c84
 afb+ 0xa0018c60 0xa0018c84 24 0xffffffffffffffff 0xffffffffffffffff
 afb+ 0xa0018c60 0xa0018ea0 12 0xffffffffffffffff 0xffffffffffffffff
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa0025650
+f pc 4 0xa0018c4c
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa0025650
+aer pc = 0xa0018c4c
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27336,7 +27336,10 @@ f fcn.a00182f8 496 0xa00182f8
 f fcn.a00184e8 158 0xa00184e8 
 f fcn.a0018a98 282 0xa0018a98 
 f fcn.a0018c1c 68 0xa0018c1c 
-f fcn.a0018c60 588 0xa0018c60 
+fs registers
+f pc 4 0xa0018c4c 
+fs functions
+f handle_gp_15416 588 0xa0018c60 
 f fcn.a0018fc0 62 0xa0018fc0 
 f fcn.a0019000 120 0xa0019000 
 f fcn.a0019078 104 0xa0019078 
@@ -27502,9 +27505,6 @@ f fcn.a00252a4 240 0xa00252a4
 f fcn.a0025394 440 0xa0025394 
 f fcn.a002554c 258 0xa002554c 
 f fcn.a0025650 866 0xa0025650 
-fs registers
-f pc 4 0xa0025650 
-fs functions
 f fcn.a00259b4 10 0xa00259b4 
 f fcn.a00259f0 720 0xa00259f0 
 f fcn.a0025cc0 176 0xa0025cc0 
@@ -104702,4 +104702,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0018c4c
+s 0xa0018c60
