@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a0025f44"
+"e scr.highlight = memset"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -1759,8 +1759,8 @@ s 0xa00098bc
 "afc reg"
 s-
 afS 0 @ 0xa00098bc
-"f memset 156 0xa00346f0"
-"af+ 0xa00346f0 memset f n"
+"f _memset 156 0xa00346f0"
+"af+ 0xa00346f0 *memset f n"
 afb+ 0xa00346f0 0xa00346f0 16 0xa0034708 0xa0034700
 afb+ 0xa00346f0 0xa0034700 8 0xa0034724 0xa0034708
 afb+ 0xa00346f0 0xa0034708 12 0xa0034720 0xa0034714
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa0025f44
+f pc 4 0xa0025650
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa0025f44
+aer pc = 0xa0025650
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27502,6 +27502,9 @@ f fcn.a00252a4 240 0xa00252a4
 f fcn.a0025394 440 0xa0025394 
 f fcn.a002554c 258 0xa002554c 
 f fcn.a0025650 866 0xa0025650 
+fs registers
+f pc 4 0xa0025650 
+fs functions
 f fcn.a00259b4 10 0xa00259b4 
 f fcn.a00259f0 720 0xa00259f0 
 f fcn.a0025cc0 176 0xa0025cc0 
@@ -27512,9 +27515,6 @@ f fcn.a0025e74 60 0xa0025e74
 f fcn.a0025eb0 116 0xa0025eb0 
 f fcn.a0025f24 32 0xa0025f24 
 f fcn.a0025f44 936 0xa0025f44 
-fs registers
-f pc 4 0xa0025f44 
-fs functions
 f fcn.a00262ec 420 0xa00262ec 
 f fcn.a002664c 98 0xa002664c 
 f fcn.a00266b0 96 0xa00266b0 
@@ -27587,6 +27587,7 @@ f fcn.a00343d8 340 0xa00343d8
 f fcn.a003452c 140 0xa003452c 
 f fcn.a00345b8 164 0xa00345b8 
 f memcpy 148 0xa003465c 
+f _memset 156 0xa00346f0 
 f memset 156 0xa00346f0 
 f fcn.a003478c 162 0xa003478c 
 f fcn.a0034830 130 0xa0034830 
@@ -102019,6 +102020,7 @@ ahb 64 @ 0xa00ece10
 ahb 64 @ 0xa012fff8
 # types
 "tk *aligned_alloc=func"
+"tk *memset=func"
 "tk _Exit=func"
 "tk __assert_fail=func"
 "tk __bzero=func"
@@ -102192,6 +102194,11 @@ ahb 64 @ 0xa012fff8
 "tk func.*aligned_alloc.arg.1=size_t,size"
 "tk func.*aligned_alloc.args=2"
 "tk func.*aligned_alloc.ret=void"
+"tk func.*memset.arg.0=void *,str"
+"tk func.*memset.arg.1=int32_t,c"
+"tk func.*memset.arg.2=uint32_t,n"
+"tk func.*memset.args=3"
+"tk func.*memset.ret=void"
 "tk func._Exit.arg.0=int,status"
 "tk func._Exit.args=1"
 "tk func._Exit.noreturn=true"
@@ -103232,10 +103239,11 @@ ahb 64 @ 0xa012fff8
 "tk func.memmove.arg.2=size_t,n"
 "tk func.memmove.args=3"
 "tk func.memmove.ret=void *"
-"tk func.memset.arg.0=void *,s"
-"tk func.memset.arg.1=int,c"
-"tk func.memset.arg.2=size_t,n"
+"tk func.memset.arg.0=void *,str"
+"tk func.memset.arg.1=int32_t,c"
+"tk func.memset.arg.2=uint32_t,n"
 "tk func.memset.args=3"
+"tk func.memset.cc=cdecl"
 "tk func.memset.ret=void *"
 "tk func.mkstemp.arg.0=char *,template"
 "tk func.mkstemp.args=1"
@@ -104020,6 +104028,10 @@ ahb 64 @ 0xa012fff8
 "tk func.wait.arg.0=int *,wstatus"
 "tk func.wait.args=1"
 "tk func.wait.ret=pid_t"
+"tk func.waitForTimer.arg.0=int32_t,count"
+"tk func.waitForTimer.args=1"
+"tk func.waitForTimer.cc=cdecl"
+"tk func.waitForTimer.ret=void"
 "tk func.waitid.arg.0=idtype_t,idtype"
 "tk func.waitid.arg.1=id_t,id"
 "tk func.waitid.arg.2=siginfo_t *,infop"
@@ -104625,6 +104637,7 @@ ahb 64 @ 0xa012fff8
 "tk vwprintf=func"
 "tk vwscanf=func"
 "tk wait=func"
+"tk waitForTimer=func"
 "tk waitid=func"
 "tk waitpid=func"
 "tk warn=func"
@@ -104676,4 +104689,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0025650
+s 0xa0034654
