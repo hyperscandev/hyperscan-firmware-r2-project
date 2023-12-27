@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a0034830"
+"e scr.highlight = memcpy"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -102101,6 +102101,7 @@ ahb 64 @ 0xa012fff8
 "tk coshl=func"
 "tk cosl=func"
 "tk ctime=func"
+"tk debugLog=func"
 "tk difftime=func"
 "tk div=func"
 "tk double=type"
@@ -102477,6 +102478,10 @@ ahb 64 @ 0xa012fff8
 "tk func.ctime.arg.0=const time_t *,timer"
 "tk func.ctime.args=1"
 "tk func.ctime.ret=char *"
+"tk func.debugLog.arg.0=const char *,str"
+"tk func.debugLog.args=1"
+"tk func.debugLog.cc=cdecl"
+"tk func.debugLog.ret=void"
 "tk func.difftime.arg.0=time_t,time1"
 "tk func.difftime.arg.1=time_t,time0"
 "tk func.difftime.args=2"
@@ -104697,4 +104702,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0034830
+s 0xa0013ee0
