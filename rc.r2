@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = fcn.a00348b4"
+"e scr.highlight = fcn.a0034830"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -3773,8 +3773,8 @@ s 0xa001069c
 "afc reg"
 s-
 afS 0 @ 0xa001069c
-"f fcn.a0034830 130 0xa0034830"
-"af+ 0xa0034830 fcn.a0034830 f n"
+"f _strcpy 130 0xa0034830"
+"af+ 0xa0034830 *strcpy f n"
 afb+ 0xa0034830 0xa0034830 20 0xa00348a0 0xa0034844
 afb+ 0xa0034830 0xa0034844 44 0xa003489c 0xa0034870
 afb+ 0xa0034830 0xa0034870 44 0xa0034870 0xa003489c
@@ -27590,7 +27590,7 @@ f memcpy 148 0xa003465c
 f _memset 156 0xa00346f0 
 f memset 156 0xa00346f0 
 f fcn.a003478c 162 0xa003478c 
-f fcn.a0034830 130 0xa0034830 
+f _strcpy 130 0xa0034830 
 f strlen 126 0xa00348b4 
 f fcn.a0034934 36 0xa0034934 
 f fcn.a0034958 44 0xa0034958 
@@ -102021,6 +102021,7 @@ ahb 64 @ 0xa012fff8
 # types
 "tk *aligned_alloc=func"
 "tk *memset=func"
+"tk *strcpy=func"
 "tk _Exit=func"
 "tk __assert_fail=func"
 "tk __bzero=func"
@@ -102199,6 +102200,10 @@ ahb 64 @ 0xa012fff8
 "tk func.*memset.arg.2=uint32_t,n"
 "tk func.*memset.args=3"
 "tk func.*memset.ret=void"
+"tk func.*strcpy.arg.0=char *,dest"
+"tk func.*strcpy.arg.1=const char *,src"
+"tk func.*strcpy.args=2"
+"tk func.*strcpy.ret=char *"
 "tk func._Exit.arg.0=int,status"
 "tk func._Exit.args=1"
 "tk func._Exit.noreturn=true"
@@ -103692,9 +103697,10 @@ ahb 64 @ 0xa012fff8
 "tk func.strcoll.arg.1=const char *,s2"
 "tk func.strcoll.args=2"
 "tk func.strcoll.ret=int"
-"tk func.strcpy.arg.0=char *,dest"
-"tk func.strcpy.arg.1=const char *,src"
+"tk func.strcpy.arg.0=char *,destination"
+"tk func.strcpy.arg.1=const char *,source"
 "tk func.strcpy.args=2"
+"tk func.strcpy.cc=cdecl"
 "tk func.strcpy.ret=char *"
 "tk func.strcpy_chk.arg.0=char *,dest"
 "tk func.strcpy_chk.arg.1=const char *,src"
@@ -104691,4 +104697,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa00348b4
+s 0xa0034830
