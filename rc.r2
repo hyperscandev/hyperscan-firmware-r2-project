@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = 0xa003465c"
+"e scr.highlight = decompressBackgroundImage"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -4019,8 +4019,8 @@ s 0xa000e124
 "afc reg"
 s-
 afS 0 @ 0xa000e124
-"f fcn.a000e1dc 112 0xa000e1dc"
-"af+ 0xa000e1dc fcn.a000e1dc f n"
+"f decompressBackgroundImage 112 0xa000e1dc"
+"af+ 0xa000e1dc decompressBackgroundImage f n"
 afb+ 0xa000e1dc 0xa000e1dc 112 0xffffffffffffffff 0xffffffffffffffff
 afB 64 @ 0xa000e1dc
 s 0xa000e1dc
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa0018c4c
+f pc 4 0xa0034784
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa0018c4c
+aer pc = 0xa0034784
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27223,7 +27223,7 @@ f fcn.a000dc2c 844 0xa000dc2c
 f fcn.a000df78 310 0xa000df78 
 f fcn.a000e0b0 116 0xa000e0b0 
 f fcn.a000e124 184 0xa000e124 
-f fcn.a000e1dc 112 0xa000e1dc 
+f decompressBackgroundImage 112 0xa000e1dc 
 f fcn.a000e24c 236 0xa000e24c 
 f fcn.a000e338 136 0xa000e338 
 f fcn.a000e428 104 0xa000e428 
@@ -27336,9 +27336,6 @@ f fcn.a00182f8 496 0xa00182f8
 f fcn.a00184e8 158 0xa00184e8 
 f fcn.a0018a98 282 0xa0018a98 
 f fcn.a0018c1c 68 0xa0018c1c 
-fs registers
-f pc 4 0xa0018c4c 
-fs functions
 f handle_gp_15416 588 0xa0018c60 
 f fcn.a0018fc0 62 0xa0018fc0 
 f fcn.a0019000 120 0xa0019000 
@@ -27589,6 +27586,9 @@ f fcn.a00345b8 164 0xa00345b8
 f memcpy 148 0xa003465c 
 f _memset 156 0xa00346f0 
 f memset 156 0xa00346f0 
+fs registers
+f pc 4 0xa0034784 
+fs functions
 f fcn.a003478c 162 0xa003478c 
 f _strcpy 130 0xa0034830 
 f strlen 126 0xa00348b4 
@@ -102102,6 +102102,7 @@ ahb 64 @ 0xa012fff8
 "tk cosl=func"
 "tk ctime=func"
 "tk debugLog=func"
+"tk decompressBackgroundImage=func"
 "tk difftime=func"
 "tk div=func"
 "tk double=type"
@@ -102482,6 +102483,11 @@ ahb 64 @ 0xa012fff8
 "tk func.debugLog.args=1"
 "tk func.debugLog.cc=cdecl"
 "tk func.debugLog.ret=void"
+"tk func.decompressBackgroundImage.arg.0=const char *,buffer"
+"tk func.decompressBackgroundImage.arg.1=uint32_t,length"
+"tk func.decompressBackgroundImage.args=2"
+"tk func.decompressBackgroundImage.cc=cdecl"
+"tk func.decompressBackgroundImage.ret=void *"
 "tk func.difftime.arg.0=time_t,time1"
 "tk func.difftime.arg.1=time_t,time0"
 "tk func.difftime.args=2"
@@ -104702,4 +104708,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0034784
+s 0xa000e1dc
