@@ -27230,6 +27230,7 @@ f fcn.a000e428 104 0xa000e428
 f fcn.a000e490 64 0xa000e490 
 f fcn.a000e4d0 84 0xa000e4d0 
 f runScreensaver__ 528 0xa000e524 
+f runScreensaver 528 0xa000e524 
 f fcn.a000e734 2060 0xa000e734 
 f fcn.a000ef40 536 0xa000ef40 
 f fcn.a000f158 244 0xa000f158 
@@ -104710,4 +104711,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0011090
+s 0xa000e524
