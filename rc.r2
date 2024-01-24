@@ -552,7 +552,7 @@
 "e scr.flush = false"
 "e scr.fps = false"
 "e scr.gadgets = true"
-"e scr.highlight = decompressBackgroundImage"
+"e scr.highlight = fcn.a000f870"
 "e scr.highlight.grep = false"
 "e scr.hist.block = true"
 "e scr.hist.filter = true"
@@ -4126,8 +4126,8 @@ s 0xa000f6fc
 "afc reg"
 s-
 afS 0 @ 0xa000f6fc
-"f fcn.a000f870 860 0xa000f870"
-"af+ 0xa000f870 fcn.a000f870 f n"
+"f insertDisc 860 0xa000f870"
+"af+ 0xa000f870 insertDisc f n"
 afb+ 0xa000f870 0xa000f870 36 0xa000f8a0 0xa000f894
 afb+ 0xa000f870 0xa000f894 12 0xa000f8a0 0xffffffffffffffff
 afb+ 0xa000f870 0xa000f8a0 52 0xa000f904 0xa000f8d4
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa0034784
+f pc 4 0xa000e1de
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa0034784
+aer pc = 0xa000e1de
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27224,6 +27224,9 @@ f fcn.a000df78 310 0xa000df78
 f fcn.a000e0b0 116 0xa000e0b0 
 f fcn.a000e124 184 0xa000e124 
 f decompressBackgroundImage 112 0xa000e1dc 
+fs registers
+f pc 4 0xa000e1de 
+fs functions
 f fcn.a000e24c 236 0xa000e24c 
 f fcn.a000e338 136 0xa000e338 
 f fcn.a000e428 104 0xa000e428 
@@ -27236,7 +27239,7 @@ f fcn.a000f158 244 0xa000f158
 f fcn.a000f2b8 480 0xa000f2b8 
 f fcn.a000f498 612 0xa000f498 
 f fcn.a000f6fc 372 0xa000f6fc 
-f fcn.a000f870 860 0xa000f870 
+f insertDisc__ 860 0xa000f870 
 f fcn.a000fbcc 640 0xa000fbcc 
 f fcn.a000fe4c 282 0xa000fe4c 
 f fcn.a000ff68 44 0xa000ff68 
@@ -27586,9 +27589,6 @@ f fcn.a00345b8 164 0xa00345b8
 f memcpy 148 0xa003465c 
 f _memset 156 0xa00346f0 
 f memset 156 0xa00346f0 
-fs registers
-f pc 4 0xa0034784 
-fs functions
 f fcn.a003478c 162 0xa003478c 
 f _strcpy 130 0xa0034830 
 f strlen 126 0xa00348b4 
@@ -104708,4 +104708,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa000e1dc
+s 0xa000f870
