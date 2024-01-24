@@ -4513,8 +4513,8 @@ s 0xa0011090
 "afc reg"
 s-
 afS 0 @ 0xa0011090
-"f fcn.a000e524 528 0xa000e524"
-"af+ 0xa000e524 fcn.a000e524 f n"
+"f runScreensaver 528 0xa000e524"
+"af+ 0xa000e524 runScreensaver f n"
 afb+ 0xa000e524 0xa000e524 32 0xa000e5d8 0xa000e544
 afb+ 0xa000e524 0xa000e544 12 0xa000e5d8 0xa000e550
 afb+ 0xa000e524 0xa000e550 20 0xa000e570 0xa000e564
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa000e1de
+f pc 4 0xa000f870
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa000e1de
+aer pc = 0xa000f870
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27224,22 +27224,23 @@ f fcn.a000df78 310 0xa000df78
 f fcn.a000e0b0 116 0xa000e0b0 
 f fcn.a000e124 184 0xa000e124 
 f decompressBackgroundImage 112 0xa000e1dc 
-fs registers
-f pc 4 0xa000e1de 
-fs functions
 f fcn.a000e24c 236 0xa000e24c 
 f fcn.a000e338 136 0xa000e338 
 f fcn.a000e428 104 0xa000e428 
 f fcn.a000e490 64 0xa000e490 
 f fcn.a000e4d0 84 0xa000e4d0 
-f fcn.a000e524 528 0xa000e524 
+f runScreensaver__ 528 0xa000e524 
 f fcn.a000e734 2060 0xa000e734 
 f fcn.a000ef40 536 0xa000ef40 
 f fcn.a000f158 244 0xa000f158 
 f fcn.a000f2b8 480 0xa000f2b8 
 f fcn.a000f498 612 0xa000f498 
 f fcn.a000f6fc 372 0xa000f6fc 
+f insertDisc 860 0xa000f870 
 f insertDisc__ 860 0xa000f870 
+fs registers
+f pc 4 0xa000f870 
+fs functions
 f fcn.a000fbcc 640 0xa000fbcc 
 f fcn.a000fe4c 282 0xa000fe4c 
 f fcn.a000ff68 44 0xa000ff68 
@@ -104708,4 +104709,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa000f870
+s 0xa000e524
