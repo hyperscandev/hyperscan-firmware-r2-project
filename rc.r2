@@ -72,7 +72,7 @@
 "e asm.anal = false"
 "e asm.arch = score7"
 "e asm.assembler = "
-"e asm.bbmiddle = true"
+"e asm.bbmiddle = false"
 "e asm.bits = 64"
 "e asm.bytes = true"
 "e asm.bytes.align = false"
@@ -558,7 +558,7 @@
 "e scr.hist.filter = true"
 "e scr.hist.save = true"
 "e scr.hist.size = 256"
-"e scr.html = false"
+"e scr.html = 0"
 "e scr.interactive = true"
 "e scr.last = true"
 "e scr.layout = "
@@ -4440,8 +4440,8 @@ s 0xa0010d20
 "afc reg"
 s-
 afS 0 @ 0xa0010d20
-"f fcn.a0011090 1296 0xa0011090"
-"af+ 0xa0011090 fcn.a0011090 f n"
+"f runSystemTest 1296 0xa0011090"
+"af+ 0xa0011090 runSystemTest f n"
 afb+ 0xa0011090 0xa0011090 60 0xa00110e0 0xa00110cc
 afb+ 0xa0011090 0xa00110cc 20 0xa0011298 0xa00110e0
 afb+ 0xa0011090 0xa00110e0 20 0xa0011114 0xa00110f4
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa000f870
+f pc 4 0xa000f872
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa000f870
+aer pc = 0xa000f872
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27239,7 +27239,7 @@ f fcn.a000f6fc 372 0xa000f6fc
 f insertDisc 860 0xa000f870 
 f insertDisc__ 860 0xa000f870 
 fs registers
-f pc 4 0xa000f870 
+f pc 4 0xa000f872 
 fs functions
 f fcn.a000fbcc 640 0xa000fbcc 
 f fcn.a000fe4c 282 0xa000fe4c 
@@ -27249,7 +27249,8 @@ f fcn.a001069c 64 0xa001069c
 f fcn.a00106dc 1200 0xa00106dc 
 f fcn.a0010b8c 404 0xa0010b8c 
 f fcn.a0010d20 880 0xa0010d20 
-f fcn.a0011090 1296 0xa0011090 
+f runSystemTest__ 1296 0xa0011090 
+f runSystemTest 1296 0xa0011090 
 f fcn.a00115a0 1188 0xa00115a0 
 f fcn.a0011a44 116 0xa0011a44 
 f fcn.a0011ab8 184 0xa0011ab8 
@@ -104709,4 +104710,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa000e524
+s 0xa0011090
