@@ -4108,8 +4108,8 @@ s 0xa000d1c0
 "afc reg"
 s-
 afS 0 @ 0xa000d1c0
-"f fcn.a000f6fc 372 0xa000f6fc"
-"af+ 0xa000f6fc fcn.a000f6fc f n"
+"f runLoadfromCD 372 0xa000f6fc"
+"af+ 0xa000f6fc runLoadfromCD f n"
 afb+ 0xa000f6fc 0xa000f6fc 32 0xa000f778 0xa000f71c
 afb+ 0xa000f6fc 0xa000f71c 20 0xa000f750 0xa000f730
 afb+ 0xa000f6fc 0xa000f730 32 0xa000f778 0xffffffffffffffff
@@ -27236,7 +27236,7 @@ f fcn.a000ef40 536 0xa000ef40
 f fcn.a000f158 244 0xa000f158 
 f fcn.a000f2b8 480 0xa000f2b8 
 f fcn.a000f498 612 0xa000f498 
-f fcn.a000f6fc 372 0xa000f6fc 
+f runLoadfromCD 372 0xa000f6fc 
 f insertDisc 860 0xa000f870 
 f insertDisc__ 860 0xa000f870 
 fs registers
@@ -104711,4 +104711,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa0010d20
+s 0xa000f6fc
