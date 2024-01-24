@@ -4392,8 +4392,8 @@ s 0xa0010b8c
 "afc reg"
 s-
 afS 0 @ 0xa0010b8c
-"f fcn.a0010d20 880 0xa0010d20"
-"af+ 0xa0010d20 fcn.a0010d20 f n"
+"f runUSBTest 880 0xa0010d20"
+"af+ 0xa0010d20 runUSBTest f n"
 afb+ 0xa0010d20 0xa0010d20 56 0xa0010d60 0xa0010d58
 afb+ 0xa0010d20 0xa0010d58 8 0xa0010d60 0xffffffffffffffff
 afb+ 0xa0010d20 0xa0010d60 12 0xa0010d94 0xa0010d6c
@@ -16034,10 +16034,10 @@ afS 0 @ 0xece10
 # registers
 fs+registers
 f r0 4 0xb0078000
-f pc 4 0xa000f872
+f pc 4 0xa000f8ac
 fs-
 aer r0 = 0xb0078000
-aer pc = 0xa000f872
+aer pc = 0xa000f8ac
 # flags
 fs *
 f aav.0x00000001 8 0x00000001 
@@ -27240,7 +27240,7 @@ f fcn.a000f6fc 372 0xa000f6fc
 f insertDisc 860 0xa000f870 
 f insertDisc__ 860 0xa000f870 
 fs registers
-f pc 4 0xa000f872 
+f pc 4 0xa000f8ac 
 fs functions
 f fcn.a000fbcc 640 0xa000fbcc 
 f fcn.a000fe4c 282 0xa000fe4c 
@@ -27249,7 +27249,7 @@ f fcn.a0010658 68 0xa0010658
 f fcn.a001069c 64 0xa001069c 
 f fcn.a00106dc 1200 0xa00106dc 
 f fcn.a0010b8c 404 0xa0010b8c 
-f fcn.a0010d20 880 0xa0010d20 
+f runUSBTest 880 0xa0010d20 
 f runSystemTest__ 1296 0xa0011090 
 f runSystemTest 1296 0xa0011090 
 f fcn.a00115a0 1188 0xa00115a0 
@@ -104711,4 +104711,4 @@ ahb 64 @ 0xa012fff8
 # macros
 # aliases
 # seek
-s 0xa000e524
+s 0xa0010d20
